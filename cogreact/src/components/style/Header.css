@@ -32,18 +32,40 @@ header.site-header {
 	align-items: center;
 }
 
-.nav-link {
-	color: #0a1316;
-	text-decoration: none;
-	padding: 0.4rem 0.6rem;
-	border-radius: 6px;
-	transition: background-color 150ms, color 150ms;
+
+
+#site-header .nav-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 150ms, border-color 150ms, box-shadow 150ms;
 }
-.nav-link:hover,
-.nav-link:focus {
-	background-color: rgba(209, 176, 176, 0.04);
-	outline: none;
+
+#site-header .nav-link:hover,
+#site-header .nav-link:focus {
+  background-color: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
+
+/* Text animation: animate the text separately from the background */
+#site-header .nav-link .nav-text {
+	display: inline-block;
+	transition: transform 180ms cubic-bezier(.2,.9,.2,1), color 180ms;
+	will-change: transform, color;
+}
+
+#site-header .nav-link:hover .nav-text,
+#site-header .nav-link:focus .nav-text {
+	transform: translateY(-3px) scale(1.02);
+	color: #ffffff;
+}
+
+#site-header .nav-link:focus-visible {
+	box-shadow: 0 0 0 4px rgba(100,108,255,0.14);
+}
+
 
 @media (max-width: 640px) {
 	.header-inner {

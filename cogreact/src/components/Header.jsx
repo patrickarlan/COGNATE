@@ -8,10 +8,10 @@ export default function Header() {
         <div className="brand" aria-label="COGNATE">
           COGNATE
         </div>
-        <nav className="site-nav" aria-label="Main navigation">
-          <a className="nav-link" href="#home">Home</a>
-          <a className="nav-link" href="#about">About Us</a>
-          <a className="nav-link" href="#contact">Contact Us</a>
+        <nav className="site-nav fw-bold" aria-label="Main navigation">
+          <a className="nav-link" href="#home"><span className="nav-text">Home</span></a>
+          <a className="nav-link" href="#about"><span className="nav-text">About Us</span></a>
+          <a className="nav-link" href="#contact"><span className="nav-text">Contact Us</span></a>
         </nav>
       </div>
     </header>
