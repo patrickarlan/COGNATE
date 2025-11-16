@@ -1,0 +1,54 @@
+/* Strong ID selector so header styles win over app/global styles */
+#site-header,
+header.site-header {
+		width: 100%;
+		display: block;
+		background-color: #44a4c2; /* header background controlled here */
+		color: inherit;
+}
+/* remove accidental .custom-header rule so header-inner can be controlled here */
+.custom-header { background: transparent !important; }
+
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.75rem 1rem;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.brand {
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	font-size: 1.125rem;
+}
+
+.site-nav {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.nav-link {
+	color: #0a1316;
+	text-decoration: none;
+	padding: 0.4rem 0.6rem;
+	border-radius: 6px;
+	transition: background-color 150ms, color 150ms;
+}
+.nav-link:hover,
+.nav-link:focus {
+	background-color: rgba(209, 176, 176, 0.04);
+	outline: none;
+}
+
+@media (max-width: 640px) {
+	.header-inner {
+		padding: 0.5rem 0.75rem;
+	}
+	.site-nav { gap: 0.5rem; }
+}
+
